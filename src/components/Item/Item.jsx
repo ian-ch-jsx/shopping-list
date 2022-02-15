@@ -1,16 +1,16 @@
 import { useState } from 'react';
 
-export default function Item({ item, onChange, onDelete }) {
+export default function Item({ item, onEdit, onDelete }) {
   const [isEditing, setIsEditing] = useState(false);
   let itemContent;
-  console.log('item', item);
+
   if (isEditing) {
     itemContent = (
       <>
         <input
           value={item.text}
           onChange={(e) => {
-            onChange({
+            onEdit({
               ...item,
               text: e.target.value,
             });
@@ -30,6 +30,16 @@ export default function Item({ item, onChange, onDelete }) {
   }
   return (
     <div>
+      <input
+        type="checkbox"
+        checked={item.done}
+        onChange={(e) => {
+          onEdit({
+            ...item,
+            done: e.target.checked,
+          });
+        }}
+      />
       {itemContent}
       <button type="button" onClick={() => onDelete(item.id)}>
         Delete

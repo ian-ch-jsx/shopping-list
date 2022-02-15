@@ -5,7 +5,6 @@ import ItemList from '../../components/ItemList/ItemList';
 const initialItems = [
   { id: 0, text: 'kittens', done: false },
   { id: 1, text: 'puppies', done: false },
-  { id: 2, text: 'zzxczxc', done: false },
 ];
 
 function itemReducer(items, action) {
@@ -48,7 +47,7 @@ export default function Main() {
     });
   };
 
-  const handleChangeItem = (task) => {
+  const handleEditItem = (task) => {
     dispatch({
       type: 'changed',
       task,
@@ -65,7 +64,7 @@ export default function Main() {
     <>
       <h1>Shopping List!</h1>
       <AddItem onAddItem={handleAddItem} />
-      <ItemList items={items} onChangeItem={handleChangeItem} onDeleteItem={handleDeleteItem} />
+      <ItemList items={items} onEditItem={handleEditItem} onDeleteItem={handleDeleteItem} />
     </>
   );
 }

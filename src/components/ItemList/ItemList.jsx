@@ -1,12 +1,12 @@
 import Item from '../Item/Item';
 
-export default function ItemList({ onChangeItem, onDeleteItem, items }) {
+export default function ItemList({ onEditItem, onDeleteItem, items }) {
   return (
     <div>
       <ul>
         {items.map((item) => (
           <li key={item.id}>
-            <Item item={item} onChange={onChangeItem} onDelete={onDeleteItem} />
+            <Item item={item} onEdit={onEditItem} onDelete={onDeleteItem} />
           </li>
         ))}
       </ul>
