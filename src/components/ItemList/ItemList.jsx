@@ -1,4 +1,3 @@
-import React from 'react';
 import Item from '../Item/Item';
 
 export default function ItemList({ onChangeItem, onDeleteItem, items }) {
@@ -11,7 +10,6 @@ export default function ItemList({ onChangeItem, onDeleteItem, items }) {
           </li>
         ))}
       </ul>
-      <Item />
     </div>
   );
 }

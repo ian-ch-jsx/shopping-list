@@ -5,9 +5,9 @@ import ItemList from '../../components/ItemList/ItemList';
 const initialItems = [
   { id: 0, text: 'kittens', done: false },
   { id: 1, text: 'puppies', done: false },
+  { id: 2, text: 'zzxczxc', done: false },
 ];
 
-// create itemReducer
 function itemReducer(items, action) {
   switch (action.type) {
     case 'added': {
@@ -38,9 +38,8 @@ function itemReducer(items, action) {
 }
 
 export default function Main() {
-  //Use reducer takes a reducer function and the initial state
   const [items, dispatch] = useReducer(itemReducer, initialItems);
-  //handleAddItem dispatch
+
   const handleAddItem = (text) => {
     dispatch({
       type: 'added',
@@ -48,14 +47,14 @@ export default function Main() {
       text,
     });
   };
-  //handleChangeItem
+
   const handleChangeItem = (task) => {
     dispatch({
       type: 'changed',
       task,
     });
   };
-  //handleDelete
+
   const handleDeleteItem = (taskId) => {
     dispatch({
       type: 'deleted',
