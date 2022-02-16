@@ -1,0 +1,65 @@
+.item {
+  display: flex;
+  margin: auto 10px;
+  align-items: center;
+  justify-content: left;
+}
+
+.item p {
+  margin: 10px;
+}
+
+.items-container {
+  display: flex;
+  margin: 0;
+  justify-content: center;
+}
+
+.items-container ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  align-items: top;
+  background-color: rgba(188, 199, 133, 0.6);
+  padding: 20px;
+  border-radius: 30px;
+  font-weight: 300;
+}
+
+.list input {
+  margin: 5px;
+  border: 0;
+  padding: 5px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 10px;
+  color: #4b551e;
+}
+
+button {
+  border: 0;
+  margin: 5px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 10px;
+  padding: 5px;
+  color: #4b551e;
+  text-transform: lowercase;
+  font-family: 'source code pro', sans-serif;
+}
+
+h1 {
+  color: #4b551e;
+  font-weight: lighter;
+  font-family: 'Rock Salt', sans-serif;
+  margin: 0;
+}
+
+.add-item {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+}
