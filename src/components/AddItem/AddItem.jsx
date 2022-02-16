@@ -10,10 +10,10 @@ export default function AddItem({ onAddItem }) {
   };
 
   return (
-    <div>
+    <div className="add-item">
       <form onSubmit={handleSubmit}>
         <input placeholder="item" value={newItem} onChange={(e) => setNewItem(e.target.value)} />
-        <button type="submit">Add Item</button>
+        <button type="submit">Add</button>
       </form>
     </div>
   );

@@ -2,7 +2,7 @@ import Item from '../Item/Item';
 
 export default function ItemList({ onEditItem, onDeleteItem, items }) {
   return (
-    <div>
+    <div className="items-container">
       <ul>
         {items.map((item) => (
           <li key={item.id}>

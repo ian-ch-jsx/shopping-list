@@ -9,7 +9,6 @@ export default function Item({ item, onEdit, onDelete }) {
       <>
         <input
           value={item.text}
-          data-testid="help"
           onChange={(e) => {
             onEdit({
               ...item,
@@ -32,7 +31,7 @@ export default function Item({ item, onEdit, onDelete }) {
     );
   }
   return (
-    <div>
+    <span className="item">
       <input
         type="checkbox"
         checked={item.done}
@@ -47,6 +46,6 @@ export default function Item({ item, onEdit, onDelete }) {
       <button type="button" onClick={() => onDelete(item.id)} data-testid={item.id}>
         Delete
       </button>
-    </div>
+    </span>
   );
 }

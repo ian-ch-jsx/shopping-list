@@ -11,7 +11,7 @@ test('renders a list of items', () => {
 test('items can be added, deleted, and edited', () => {
   render(<App />);
 
-  const addButton = screen.getByRole('button', { name: /add item/i });
+  const addButton = screen.getByRole('button', { name: /add/i });
   const input = screen.getByRole('textbox');
 
   userEvent.type(input, 'zebra');
