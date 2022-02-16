@@ -9,6 +9,7 @@ export default function Item({ item, onEdit, onDelete }) {
       <>
         <input
           value={item.text}
+          data-testid="help"
           onChange={(e) => {
             onEdit({
               ...item,
@@ -24,7 +25,9 @@ export default function Item({ item, onEdit, onDelete }) {
     itemContent = (
       <>
         <p>{item.text}</p>
-        <button onClick={() => setIsEditing(true)}>Edit</button>
+        <button onClick={() => setIsEditing(true)} data-testid={item.text}>
+          Edit
+        </button>
       </>
     );
   }
@@ -41,7 +44,7 @@ export default function Item({ item, onEdit, onDelete }) {
         }}
       />
       {itemContent}
-      <button type="button" onClick={() => onDelete(item.id)}>
+      <button type="button" onClick={() => onDelete(item.id)} data-testid={item.id}>
         Delete
       </button>
     </div>
