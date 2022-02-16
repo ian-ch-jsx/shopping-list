@@ -2,7 +2,7 @@
 
 body {
   background-color: #778472;
-  background-image: url(https://media.istockphoto.com/vectors/fruits-and-vegetables-seamless-pattern-vector-id1145430255?k=20&m=1145430255&s=612x612&w=0&h=rT49nNEgQkFNbaGvyGx38c4RZ1YA1tjFbRV6tQFtgSE=);
+  background-image: url('./assets/background.jpg');
   color: #4b551e;
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
