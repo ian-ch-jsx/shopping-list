@@ -1,4 +1,3 @@
-import { useReducer } from 'react';
 import AddItem from '../../components/AddItem/AddItem';
 import ItemList from '../../components/ItemList/ItemList';
 import { useList } from '../../context/ListContext';

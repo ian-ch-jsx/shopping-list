@@ -20,18 +20,18 @@ test('items can be added, deleted, and edited', () => {
   const item = screen.getByText(/zebra/i);
   expect(item).toBeInTheDocument();
 
-  const deleteButton = screen.getByTestId('3');
+  const deleteButton = screen.getByLabelText(/delete zebra/i);
   const zebra = screen.getByText(/zebra/i);
 
   userEvent.click(deleteButton);
 
   expect(zebra).not.toBeInTheDocument();
 
-  const editButton = screen.getByTestId('Ice Cream 🍨');
+  const editButton = screen.getByLabelText(/edit Ice Cream 🍨/i);
 
   userEvent.click(editButton);
 
-  const editInput = screen.getByDisplayValue('Ice Cream 🍨');
+  const editInput = screen.getByDisplayValue(/Ice Cream 🍨/i);
   const updateButton = screen.getByRole('button', { name: /update/i });
 
   userEvent.type(editInput, '2');

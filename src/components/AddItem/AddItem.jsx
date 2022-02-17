@@ -12,7 +12,12 @@ export default function AddItem({ onAddItem }) {
   return (
     <div className="add-item">
       <form onSubmit={handleSubmit}>
-        <input placeholder="item" value={newItem} onChange={(e) => setNewItem(e.target.value)} />
+        <input
+          placeholder="item"
+          value={newItem}
+          onChange={(e) => setNewItem(e.target.value)}
+          aria-label="add item"
+        />
         <button type="submit">Add</button>
       </form>
     </div>
