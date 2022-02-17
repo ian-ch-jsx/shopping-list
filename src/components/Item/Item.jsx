@@ -17,14 +17,16 @@ export default function Item({ item, onEdit, onDelete }) {
           }}
         />
 
-        <button onClick={() => setIsEditing(false)}>update</button>
+        <button onClick={() => setIsEditing(false)} aria-label={`update ${item.text}`}>
+          update
+        </button>
       </>
     );
   } else {
     itemContent = (
       <>
         <p>{item.text}</p>
-        <button onClick={() => setIsEditing(true)} data-testid={item.text}>
+        <button onClick={() => setIsEditing(true)} aria-label={`edit ${item.text}`}>
           Edit
         </button>
       </>
@@ -43,7 +45,7 @@ export default function Item({ item, onEdit, onDelete }) {
         }}
       />
       {itemContent}
-      <button type="button" onClick={() => onDelete(item.id)} data-testid={item.id}>
+      <button type="button" onClick={() => onDelete(item.id)} aria-label={`delete ${item.text}`}>
         Delete
       </button>
     </span>
