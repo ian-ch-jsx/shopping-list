@@ -27,17 +27,17 @@ test('items can be added, deleted, and edited', () => {
 
   expect(zebra).not.toBeInTheDocument();
 
-  const editButton = screen.getByTestId('kittens');
+  const editButton = screen.getByTestId('Ice Cream 🍨');
 
   userEvent.click(editButton);
 
-  const editInput = screen.getByDisplayValue('kittens');
+  const editInput = screen.getByDisplayValue('Ice Cream 🍨');
   const updateButton = screen.getByRole('button', { name: /update/i });
 
   userEvent.type(editInput, '2');
   userEvent.click(updateButton);
 
-  const newText = screen.getByText(/kittens2/i);
+  const newText = screen.getByText(/Ice Cream 🍨2/i);
 
   expect(newText).toBeInTheDocument();
 });
