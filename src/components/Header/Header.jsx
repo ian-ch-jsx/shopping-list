@@ -10,7 +10,10 @@ export default function Header() {
     <>
       <header>
         <div>
-          <p>{message}</p> <button onClick={handleClearItems}>clear cart</button>
+          <p>{message}</p>
+          <button onClick={handleClearItems} aria-label="clear cart">
+            clear cart
+          </button>
         </div>
       </header>
     </>
