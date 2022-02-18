@@ -41,3 +41,14 @@ test('items can be added, deleted, and edited', () => {
 
   expect(newText).toBeInTheDocument();
 });
+
+test('clear cart clears the cart', () => {
+  render(<App />);
+
+  const clearButton = screen.getByLabelText(/clear cart/i);
+  const item = screen.getByText(/Ice Cream 🍨/i);
+
+  userEvent.click(clearButton);
+
+  expect(item).not.toBeInTheDocument();
+});
